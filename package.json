@@ -1,0 +1,12 @@
+{
+  "name": "npm-example",
+  "version": "0.0.3",
+  "scripts": {
+    "start": "node helloworld"
+  },
+  "dependencies": {
+    "npm-force-resolutions": "^0.0.10",
+    "send": "^0.16.2",
+    "terser-webpack-plugin": "5.3.6"
+  }
+}

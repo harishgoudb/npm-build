@@ -1,0 +1,19 @@
+{
+ "status": "staged",                            // new build status (any string)
+ "comment" : "Tested on all target platforms.", // An optional comment describing the reason for promotion. Default: ""
+ "ciUser": "builder",                           // The user that invoked promotion from the CI server
+ "timestamp" : ISO8601,                         // the time the promotion command was received by Artifactory (It needs to be unique), 
+                                                // the format is: 'yyyy-MM-dd'T'HH:mm:ss.SSSZ'. Example: '2016-02-11T18:30:24.825+0200'.
+ "dryRun" : false,                              // run without executing any operation in Artifactory, but get the results to check if the operation can succeed. Default: false
+ "sourceRepo" : "libs-snapshot-local",          // optional repository from which the build's artifacts will be copied/moved 
+ "targetRepo" : "libs-release-local",           // optional repository to move or copy the build's artifacts and/or dependencies
+ "copy": false,                                 // whether to copy instead of move, when a target repository is specified. Default: false
+ "artifacts" : true,                            // whether to move/copy the build's artifacts. Default: true
+ "dependencies" : false,                        // whether to move/copy the build's dependencies. Default: false.
+ "scopes" : [ "compile", "runtime" ],           // an array of dependency scopes to include when "dependencies" is true
+ "properties": {                                // a list of properties to attach to the build's artifacts (regardless if "targetRepo" is used).
+     "components": ["c1","c3","c14"],
+     "release-name": ["fb3-ga"]
+ },
+ "failFast": true                               // fail and abort the operation upon receiving an error. Default: true
+}
