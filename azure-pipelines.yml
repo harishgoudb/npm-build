@@ -14,7 +14,7 @@ steps:
   inputs:
     command: 'install'
     artifactoryConnection: 'NEW_JFrog_Artifactory_V2'
-    sourceRepo: 'ca-npm'
+    sourceRepo: 'npm'
     collectBuildInfo: true
     threads: '1'
     buildName: '$(Build.DefinitionName)'
