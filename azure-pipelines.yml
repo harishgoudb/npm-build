@@ -13,7 +13,7 @@ steps:
 - task: JFrogNpm@1
   inputs:
     command: 'install'
-    artifactoryConnection: 'NEW_JFrog_Artifactory_V2'
+    artifactoryService: 'NEW_JFrog_Artifactory_V2'
     sourceRepo: 'npm'
     collectBuildInfo: true
     threads: '1'
